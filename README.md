@@ -1,7 +1,6 @@
-# simple-stable-data
+# Simple JavaScript VisJS Network Visualizer Starter
 ![alt text](readme.png)
 
-Simple JavaScript VisJS Network Visualizer Starter
 
 ## Install
 ```
