@@ -13,6 +13,15 @@ mv simple-stable-data [your www-directory]
 #### Edit
 Edit values in ./index.html between /* SUPERSCRIPT */
 
+#### Functions
+```
+addGoodNode("Add New Feed ($)"); // add good node
+addBadNode('High Potential Words'); // add red node
+addEdge('Easy Filter','High Potential Words'); // add single line
+addEdge("Discover New Profiles",["Your Feeds","Easy Filter"]); // add multiple lines
+```
+
+
 ### Bonus: Keep things alive
 ```
 // Enjoy the free code sharing. 
