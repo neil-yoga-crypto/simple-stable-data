@@ -12,7 +12,7 @@
     var network = null;
 
     /* SUPERSCRIPT: Edit This */
-	addGoodNode("Your Feeds",'icons/consciousness.png');
+	addGoodNode("Your Feeds",'img/consciousness.png');
     addGoodNode("Discover New Profiles");
 	addBadNode("Re-Visit Saved Profiles");
 
@@ -56,9 +56,6 @@
 
 
 	function addGoodNode(label,img='') {
-      		if(img===''){
-             	img = 'icons/house.jpeg'; 
-            }
       		let id = nodes.length+1;
       		node_ids[label] = id;
       		nodes.push({ id: id, label:label, shape: "circularImage", image: img});

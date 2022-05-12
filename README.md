@@ -17,6 +17,7 @@ Edit values in ./index.html between /* SUPERSCRIPT */
 ```
 addGoodNode("Add New Feed ($)"); // add good node
 addBadNode('High Potential Words'); // add red node
+addGoodNode("Your Feeds",'img/consciousness.png'); // add node with custom image
 addEdge('Easy Filter','High Potential Words'); // add single line
 addEdge("Discover New Profiles",["Your Feeds","Easy Filter"]); // add multiple lines
 ```
