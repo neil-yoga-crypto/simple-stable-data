@@ -1,0 +1,134 @@
+<html><head>
+
+<title>simple stable data</title>
+</head>
+<body style="background:#17222C">
+<script src="./vis-network.min.js"></script>
+<script type="text/javascript">
+    var DIR = "img/";
+    var nodes = [];
+    var node_ids = {};
+    var edges = [];
+    var network = null;
+
+    /* SUPERSCRIPT: Edit This */
+	addGoodNode("Your Feeds",'icons/consciousness.png');
+    addGoodNode("Discover New Profiles");
+	addBadNode("Re-Visit Saved Profiles");
+
+	addEdge("Your Feeds","Re-Visit Saved Profiles");
+
+	addGoodNode("Easy Filter");
+	addEdge("Your Feeds","Easy Filter");
+	
+	addBadNode('Blacklist');
+	addEdge('Easy Filter','Blacklist');
+
+	addBadNode('High Potential Words');
+	addEdge('Easy Filter','High Potential Words');
+
+	addGoodNode("Add New Feed ($)")
+	addEdge("Your Feeds","Add New Feed ($)");
+	addEdge("Discover New Profiles",["Your Feeds","Easy Filter"]);
+    /* SUPERSCRIPT: Don't Edit Below This */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	function addGoodNode(label,img='') {
+      		if(img===''){
+             	img = 'icons/house.jpeg'; 
+            }
+      		let id = nodes.length+1;
+      		node_ids[label] = id;
+      		nodes.push({ id: id, label:label, shape: "circularImage", image: img});
+    		return id;
+    }
+
+	function addBadNode(label,img='') {
+      		let id = nodes.length+1;
+            node_ids[label] = id;
+      		nodes.push({ id: id, label:label,color: "#db3d2d",shape: "circularImage", image: img});
+    		return id;
+    }
+
+	function addEdge(label1, label2) {
+     	 let id1 = node_ids[label1];
+      	 if(Array.isArray(label2)) {
+           	for(let i=0;i<label2.length;i++){
+              	let id2 = node_ids[label2[i]];
+      	 		edges.push({ from: id1, to: id2 });
+            }
+         } else {
+     	 	let id2 = node_ids[label2];
+      	 	edges.push({ from: id1, to: id2 });
+         }
+    }
+
+      // Called when the Visualization API is loaded.
+      function draw() {
+        // create people.
+        // value corresponds with the age of the person
+        var DIR = "img/icons/";
+        
+        
+
+	
+        
+
+        // create a network
+        var container = document.getElementById("mynetwork");
+        var data = {
+          nodes: nodes,
+          edges: edges,
+        };
+        var options = {
+          nodes: {
+            borderWidth: 4,
+            size: 30,
+            color: {
+              border: "#222222",
+            },
+            font: { color: "#eeeeee" },
+          },
+          edges: {
+            color: "lightgray"
+          },
+        };
+        network = new vis.Network(container, data, options);
+      }
+
+function _on_ready(fn) {
+    // see if DOM is already available
+    if (document.readyState === "complete" || document.readyState === "interactive") {
+        // call on next available tick
+        setTimeout(fn, 1);
+    } else {
+        document.addEventListener("DOMContentLoaded", fn);
+    }
+}    
+_on_ready(() => {
+	draw();	
+});
+    </script>
+<div id="mynetwork"><div class="vis-network" style="position: relative; overflow: hidden; touch-action: pan-y; user-select: none; width: 100%; height: 100%;" tabindex="0"><canvas style="position: relative; touch-action: none; user-select: none; width: 100%; height: 100%;" width="800" height="800"></canvas></div></div></body></html>
