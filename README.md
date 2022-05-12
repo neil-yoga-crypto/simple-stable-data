@@ -10,10 +10,10 @@ mv simple-stable-data [your www-directory]
 # browse 
 ```
 
-## Edit
+## Create Your Own
 Edit values in ./index.html between /* SUPERSCRIPT */
 
-### Possibilities
+### Simple Functions
 ```
 addGoodNode("Add New Feed ($)"); // add good node
 addBadNode('High Potential Words'); // add red node
