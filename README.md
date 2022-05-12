@@ -1,5 +1,5 @@
 # simple-stable-data
-![alt text](preview.png)
+![alt text](readme.png)
 
 Simple JavaScript VisJS Network Visualizer Starter
 
