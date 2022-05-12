@@ -3,17 +3,17 @@
 
 Simple JavaScript VisJS Network Visualizer Starter
 
-#### Install
+## Install
 ```
 git clone https://github.com/neil-yoga/simple-stable-data
 mv simple-stable-data [your www-directory]
 # browse 
 ```
 
-#### Edit
+## Edit
 Edit values in ./index.html between /* SUPERSCRIPT */
 
-#### Functions
+### Possibilities
 ```
 addGoodNode("Add New Feed ($)"); // add good node
 addBadNode('High Potential Words'); // add red node
